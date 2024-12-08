@@ -171,9 +171,3 @@ DEFAULT_FROM_EMAIL = 'QuantumCare Hospital <otahacharles@gmail.com>'
 
 
 
-
-
-
-# QUANTUMCARE AI
-
-openai.api_key = "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"
