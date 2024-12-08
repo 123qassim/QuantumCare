@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Contact - MediScript Pharmacy
+{% endblock %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh; background-color: #f8f9fa; padding: 50px 0;">
+    <div class="card shadow-lg" style="width: 100%; max-width: 800px; padding: 30px; border-radius: 10px; background: #ffffff;">
+        <h2 class="text-center mb-4" style="color: #0d6efd; font-weight: 700;">Get In Touch</h2>
+        <form method="post" action="{% url 'pharmacy_contact' %}" novalidate>
+            {% csrf_token %}
+
+            <div class="mb-4">
+                <label for="id_first_name" class="form-label" style="font-weight: 600; font-size: 1.1rem;">First Name</label>
+                <input type="text" class="form-control form-control-lg" id="id_first_name" name="first_name" placeholder="Enter your first name" style="width: 100%;"/>
+            </div>
+
+            <div class="mb-4">
+                <label for="id_last_name" class="form-label" style="font-weight: 600; font-size: 1.1rem;">Last Name</label>
+                <input type="text" class="form-control form-control-lg" id="id_last_name" name="last_name" placeholder="Enter your last name" style="width: 100%;"/>
+            </div>
+
+            <div class="mb-4">
+                <label for="id_email" class="form-label" style="font-weight: 600; font-size: 1.1rem;">Email</label>
+                <input type="email" class="form-control form-control-lg" id="id_email" name="email" placeholder="Enter your email address" style="width: 100%;"/>
+            </div>
+
+            <div class="mb-4">
+                <label for="id_subject" class="form-label" style="font-weight: 600; font-size: 1.1rem;">Subject</label>
+                <input type="text" class="form-control form-control-lg" id="id_subject" name="subject" placeholder="Enter the subject" style="width: 100%;"/>
+            </div>
+
+            <div class="mb-4">
+                <label for="id_message" class="form-label" style="font-weight: 600; font-size: 1.1rem;">Message</label>
+                <textarea class="form-control form-control-lg" id="id_message" name="message" rows="5" placeholder="Enter your message" style="width: 100%;"></textarea>
+            </div>
+
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary btn-lg" style="border-radius: 5px; font-weight: 600; background-color: #0d6efd; border-color: #0d6efd;">Send Message</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

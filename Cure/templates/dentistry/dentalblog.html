@@ -1,0 +1,240 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Dental Blog - QuantumCare{% endblock %}
+
+{% block content %}
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PureSmiles Clinic - We Are Best Dental Otaha</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="../../../static/favicon.svg" type="image/svg+xml">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Roboto:wght@400;500;600&display=swap"
+    rel="stylesheet">
+</head>
+
+<body id="top">
+
+  <!--
+    - #HEADER
+  -->
+
+  <header class="header">
+
+
+    <div class="header-bottom" data-header>
+      <div class="container">
+
+        <a href="#" class="logo">PureSmiles Clinic</a>
+
+        <nav class="navbar container" data-navbar>
+          <ul class="navbar-list">
+
+            <li>
+              <a href="{% url 'dental_home' %}" class="navbar-link" data-nav-link>Home</a>
+            </li>
+
+            <li>
+              <a href="{% url 'dental_services' %}" class="navbar-link" data-nav-link>Services</a>
+            </li>
+
+            <li>
+              <a href="{% url 'dental_about' %}" class="navbar-link" data-nav-link>About Us</a>
+            </li>
+
+            <li>
+              <a href="{% url 'dental_blog' %}" class="navbar-link" data-nav-link>Blog</a>
+            </li>
+
+            <li>
+              <a href="{% url 'dental_doctors' %}" class="navbar-link" data-nav-link>Doctors</a>
+            </li>
+
+          </ul>
+        </nav>
+
+        <a href="{% url 'book_appointment' %}" class="btn btn-primary">Book Appointment</a>
+
+        <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>
+          <ion-icon name="menu-sharp" aria-hidden="true" class="menu-icon"></ion-icon>
+          <ion-icon name="close-sharp" aria-hidden="true" class="close-icon"></ion-icon>
+        </button>
+
+      </div>
+    </div>
+
+  </header>
+
+
+ <!--
+        - #BLOG
+      -->
+
+      <section class="section blog" id="blog" aria-label="blog">
+        <div class="container">
+
+          <p class="section-subtitle text-center">Our Blog</p>
+
+          <h2 class="h2 section-title text-center">Latest Blog & News</h2>
+
+          <ul class="blog-list">
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 1180; --height: 800;">
+                  <img src="../../../static/images/blog-1.jpg" width="1180" height="800" loading="lazy"
+                       alt="Cras accumsan nulla nec lacus ultricies placerat." class="img-cover">
+
+                  <div class="card-badge">
+                    <ion-icon name="calendar-outline"></ion-icon>
+
+                    <time class="time" datetime="2022-03-24">24th March 2022</time>
+                  </div>
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">The Importance of Oral Hygiene: Tips for a Healthy Smile</a>
+                  </h3>
+
+                  <p class="card-text">
+                   Maintaining proper oral hygiene is more than just keeping your teeth white—it plays a crucial role in your overall health. At PureSmiles Clinic, we believe that everyone deserves a healthy, confident smile.
+                  </p>
+
+                  <a href="{% url 'blog1' %}" class="card-link">Read More</a>
+
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 1180; --height: 800;">
+                  <img src="../../../static/images/blog-2.jpg" width="1180" height="800" loading="lazy"
+                       alt="Dras accumsan nulla nec lacus ultricies placerat." class="img-cover">
+
+                  <div class="card-badge">
+                    <ion-icon name="calendar-outline"></ion-icon>
+
+                    <time class="time" datetime="2022-03-24">24th March 2022</time>
+                  </div>
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title"> Top 5 Foods for Strong Teeth and Gums</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Your diet plays a significant role in maintaining your oral health. By choosing tooth-friendly foods, you can keep your teeth strong, prevent cavities, and promote healthy gums. At PureSmiles Clinic, we believe in...
+                  </p>
+
+                  <a href="{% url 'blog2' %}" class="card-link">Read More</a>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 1180; --height: 800;">
+                  <img src="../../../static/images/blog-3.jpg" width="1180" height="800" loading="lazy"
+                       alt="Seas accumsan nulla nec lacus ultricies placerat." class="img-cover">
+
+                  <div class="card-badge">
+                    <ion-icon name="calendar-outline"></ion-icon>
+
+                    <time class="time" datetime="2022-03-24">24th March 2022</time>
+                  </div>
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">What to Expect During Your First Dental Visit at PureSmiles Clinic</a>
+                  </h3>
+
+                  <p class="card-text">
+                    We understand that visiting the dentist for the first time can feel daunting. That’s why PureSmiles Clinic is committed to making your experience...
+                  </p>
+
+                  <a href="{% url 'blog3' %}" class="card-link">Read More</a>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+<!--
+    - #FOOTER
+  -->
+
+
+
+
+
+
+  <!--
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="caret-up" aria-hidden="true"></ion-icon>
+  </a>
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="../../../static/styles/script.js" defer></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
+
+{% endblock %}

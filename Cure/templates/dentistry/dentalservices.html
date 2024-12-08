@@ -1,0 +1,271 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Dental Services - QuantumCare{% endblock %}
+
+{% block content %}
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PureSmiles Clinic - We Are Best Dental Clinic</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="../../../static/favicon.svg" type="image/svg+xml">
+
+  <!--
+    - custom css link
+  -->
+<link rel="stylesheet" href="{% static 'styles/style.css' %}">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Roboto:wght@400;500;600&display=swap"
+    rel="stylesheet">
+</head>
+
+<body id="top">
+
+  <!--
+    - #HEADER
+  -->
+
+  <header class="header">
+
+
+    <div class="header-bottom" data-header>
+      <div class="container">
+
+        <a href="#" class="logo">PureSmiles Clinic</a>
+
+        <nav class="navbar container" data-navbar>
+          <ul class="navbar-list">
+
+            <li>
+              <a href="{% url 'dental_home' %}" class="navbar-link" data-nav-link>Home</a>
+            </li>
+
+            <li>
+              <a href="{% url 'dental_services' %}" class="navbar-link" data-nav-link>Services</a>
+            </li>
+
+            <li>
+              <a href="{% url 'dental_about' %}" class="navbar-link" data-nav-link>About Us</a>
+            </li>
+
+            <li>
+              <a href="{% url 'dental_blog' %}" class="navbar-link" data-nav-link>Blog</a>
+            </li>
+
+            <li>
+              <a href="{% url 'dental_doctors' %}" class="navbar-link" data-nav-link>Doctors</a>
+            </li>
+
+          </ul>
+        </nav>
+
+        <a href="{% url 'book_appointment' %}" class="btn btn-primary">Book Appointment</a>
+
+        <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>
+          <ion-icon name="menu-sharp" aria-hidden="true" class="menu-icon"></ion-icon>
+          <ion-icon name="close-sharp" aria-hidden="true" class="close-icon"></ion-icon>
+        </button>
+
+      </div>
+    </div>
+
+  </header>
+
+
+
+
+
+    <!--
+        - #SERVICE
+      -->
+
+      <section class="section service" id="service" aria-label="service">
+        <div class="container">
+
+          <p class="section-subtitle text-center">Our Services</p>
+
+          <h2 class="h2 section-title text-center">What We Provide</h2>
+
+          <ul class="service-list">
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <img src="../../../static/images/service-icon-1.png" width="100" height="100" loading="lazy"
+                       alt="service icon" class="w-100">
+                </div>
+
+                <div>
+                  <h3 class="h3 card-title">Root Canal</h3>
+
+                  <p class="card-text">
+                    At PureSmiles Clinic, we specialize in gentle and effective root canal treatments designed to save your natural teeth and alleviate pain.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <img src="../../../static/images/service-icon-2.png" width="100" height="100" loading="lazy"
+                       alt="service icon" class="w-100">
+                </div>
+
+                <div>
+                  <h3 class="h3 card-title">Alignment Teeth</h3>
+
+                  <p class="card-text">
+                    Achieve the perfectly aligned smile you’ve always wanted with our teeth alignment services at PureSmiles Clinic.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <img src="../../../static/images/service-icon-3.png" width="100" height="100" loading="lazy"
+                       alt="service icon" class="w-100">
+                </div>
+
+                <div>
+                  <h3 class="h3 card-title">Cosmetic Teeth</h3>
+
+                  <p class="card-text">
+                    Enhance your confidence with our cosmetic dentistry services at PureSmiles Clinic. From teeth whitening and veneers to bonding and reshaping,
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="service-banner">
+              <figure>
+                <img src="../../../static/images/service-banner.png" width="409" height="467" loading="lazy"
+                     alt="service banner" class="w-100">
+              </figure>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <img src="../../../static/images/service-icon-4.png" width="100" height="100" loading="lazy"
+                       alt="service icon" class="w-100">
+                </div>
+
+                <div>
+                  <h3 class="h3 card-title">Oral Hygiene</h3>
+
+                  <p class="card-text">
+                    Maintaining optimal oral hygiene is the foundation of a healthy smile, and at PureSmiles Clinic, we're here to support you every step of the way.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <img src="../../../static/images/service-icon-5.png" width="100" height="100" loading="lazy"
+                       alt="service icon" class="w-100">
+                </div>
+
+                <div>
+                  <h3 class="h3 card-title">Live Advisory</h3>
+
+                  <p class="card-text">
+                    PureSmiles Clinic offers Live Advisory services to address your dental concerns in real-time. Whether you need guidance on oral hygiene
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <img src="../../../static/images/service-icon-6.png" width="100" height="100" loading="lazy"
+                       alt="service icon" class="w-100">
+                </div>
+
+                <div>
+                  <h3 class="h3 card-title">Cavity Inspection</h3>
+
+                  <p class="card-text">
+                    At PureSmiles Clinic, our thorough cavity inspection services help detect tooth decay early to prevent further damage.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+<!--
+    - #FOOTER
+  -->
+
+
+
+
+
+
+  <!--
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="caret-up" aria-hidden="true"></ion-icon>
+  </a>
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="../../../static/styles/script.js" defer></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
+
+{% endblock %}

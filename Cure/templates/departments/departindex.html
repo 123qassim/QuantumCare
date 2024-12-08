@@ -1,0 +1,350 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+
+
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>CovIDynamics</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="../../../static/styles/css3/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="../../../static/styles/css3/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="../../../static/styles/css3/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="../../../static/images3/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+       <link rel="stylesheet" href="../../../static/styles/css3/owl.carousel.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <link rel="stylesheet" href="https://rawgit.com/LeshikJanz/libraries/master/Bootstrap/baguetteBox.min.css">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="../../../static/images3/loading.gif" alt="#"/></div>
+      </div>
+      <!-- end loader -->
+      <!-- top -->
+                    <!-- header -->
+         <header class="header-area">
+            <div class="left">
+               <a href="Javascript:void(0)"><i class="fa fa-search" aria-hidden="true"></i></a>
+            </div>
+            <div class="right">
+               <a href="Javascript:void(0)"><i class="fa fa-user" aria-hidden="true"></i></a>
+            </div>
+            <div class="container">
+               <div class="row d_flex">
+                  <div class="col-sm-3 logo_sm">
+                     <div class="logo">
+                        <a href="{% url 'depart_home' %}"></a>
+                     </div>
+                  </div>
+                  <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-9">
+                     <div class="navbar-area">
+                        <nav class="site-navbar">
+                           <ul>
+                              <li><a class="active"  href="{% url 'depart_home' %}">Home</a></li>
+                              <li><a href="{% url 'depart_about' %}">About</a></li>
+                              <li><a href="{% url 'depart_action' %}">Action</a></li>
+                              <li><a href="{% url 'depart_home' %}" class="logo_midle">CovIDynamics</a></li>
+                              <li><a href="{% url 'depart_news' %}">news</a></li>
+                              <li><a href="{% url 'depart_doctors' %}">Doctors</a></li>
+                           </ul>
+                           <button class="nav-toggler">
+                           <span></span>
+                           </button>
+                        </nav>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </header>
+      <!-- end header -->
+            <div class="full_bg">
+      <!-- header inner -->
+         <div class="section">
+            <!-- carousel code -->
+            <div id="banner1" class="carousel slide slider_main">
+               <ol class="carousel-indicators ">
+                  <li data-target="#banner1" data-slide-to="0" class="indicator-li-1">01</li>
+                  <li data-target="#banner1" data-slide-to="1" class="">02</li>
+                  <li data-target="#banner1" data-slide-to="2" class="active">03</li>
+               </ol>
+               <div class="carousel-inner">
+                  <!-- first slide -->
+                  <div class="carousel-item active">
+                     <div class="carousel-caption cuplle">
+                        <div class="container">
+                           <div class="row">
+                              <div class="col-md-8">
+                                 <div class="photog">
+                                    <h1>Care early<br>Coronavirus</h1>
+                                    <a class="read_more" href="javascript:void(0)" >Read More</a>
+                                    <a class="read_more" href="departabout.html" >About Us</a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- second slide -->
+                  <div class="carousel-item">
+                     <div class="carousel-caption cuplle">
+                        <div class="container">
+                           <div class="row">
+                              <div class="col-md-8">
+                                <div class="photog">
+                                    <h1>Care early<br>Coronavirus</h1>
+                                    <a class="read_more" href="javascript:void(0)" >Read More</a>
+                                    <a class="read_more" href="departabout.html" >About Us</a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- third slide -->
+                  <div class="carousel-item">
+                     <div class="carousel-caption cuplle">
+                        <div class="container">
+                           <div class="row">
+                              <div class="col-md-8">
+                                <div class="photog">
+                                    <h1>Care early<br>Coronavirus</h1>
+                                    <a class="read_more" href="javascript:void(0)" >Read More</a>
+                                    <a class="read_more" href="departabout.html" >About Us</a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- controls -->
+               <a class="carousel-control-prev" href="#banner1" role="button" data-slide="prev">
+               <i class="fa fa-angle-left" aria-hidden="true"></i>
+               <span class="sr-only">Previous</span>
+               </a>
+               <a class="carousel-control-next" href="#banner1" role="button" data-slide="next">
+               <i class="fa fa-angle-right" aria-hidden="true"></i>
+               <span class="sr-only">Next</span>
+               </a>
+            </div>
+         </div>
+      </div>
+      <!-- end banner -->
+      <!-- about -->
+      <div class="about">
+         <div class="container_width">
+            <div class="row d_flex">
+                   <div class="col-md-7">
+                  <div class="titlepage text_align_left">
+                     <h2>About Corona Virus </h2>
+                     <p>COVID-19, caused by the SARS-CoV-2 virus, emerged in December 2019 and rapidly spread worldwide, leading to a global pandemic. It primarily affects the respiratory system, with symptoms ranging from mild to severe, including fever, cough, shortness of breath, and loss of taste or smell. In some cases, the virus can cause pneumonia, organ failure, or even death, especially in individuals with underlying health conditions</p>
+                     <a class="read_more" href="{% url 'depart_about' %}">About More</a>
+                  </div>
+               </div>
+               <div class="col-md-5">
+                  <div class="about_img text_align_center">
+                     <figure><img src="../../../static/images3/about.png" alt="#"/></figure>
+                  </div>
+               </div>
+              
+            </div>
+         </div>
+      </div>
+      <!-- end about -->
+     <!-- coronata -->
+      <div class="coronata">
+         <div class="container">
+            <div class="row d_flex grid">
+               <div class="col-md-7">
+                  <div class="coronata_img text_align_center">
+                     <figure><img src="../../../static/images3/corona.png" alt="#"/></figure>
+                  </div>
+               </div>
+               <div class="col-md-5 oder1">
+                  <div class="titlepage text_align_left">
+                     <h2>Coronavirus what it is?</h2>
+                     <p>Coronavirus (COVID-19) is a highly contagious virus caused by the SARS-CoV-2 virus. It primarily affects the respiratory system, with symptoms like fever, cough, and shortness of breath.</p>
+                     <a class="read_more" href="#">About More</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end coronata -->
+   
+        <!-- protect -->
+      <div class="protect">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage text_align_center">
+                     <h2>How to Protect Yourself</h2>
+                     <p>To protect yourself from COVID-19</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+           <div class="protect_bg">
+         <div class="container">
+             <div class="row">
+               <div class="col-md-12">
+                  <!--  Demos -->
+                  <div class="owl-carousel owl-theme">
+                     <div class="item">
+                        <div class="protect_box text_align_center">
+                          <div class="desktop">
+                             <i><img src="../../../static/images3/pro1.png" alt="#"/></i>
+                           <h3> Wear Mask</h3>
+                           <span> Wear a mask in crowded or indoor places.</span>
+                          </div>
+                           <a class="read_more" href="#">Read More</a>
+                        </div>
+                     </div>
+                     <div class="item">
+                          <div class="protect_box text_align_center">
+                          <div class="desktop">
+                             <i><img src="../../../static/images3/pro2.png" alt="#"/></i>
+                           <h3> Wash Your Hands</h3>
+                           <span> Wash your hands regularly with soap and water for at least 20 seconds.</span>
+                          </div>
+                           <a class="read_more" href="#">Read More</a>
+                        </div>
+                     </div>
+                     <div class="item">
+                         <div class="protect_box text_align_center">
+                          <div class="desktop">
+                             <i><img src="../../../static/images3/pro3.png" alt="#"/></i>
+                           <h3> Stay at Home</h3>
+                           <span> Stay home if you're feeling unwell or have symptoms of COVID-19.</span>
+                          </div>
+                           <a class="read_more" href="#">Read More</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+          </div>
+      </div>
+         </div>
+      </div>
+      <!-- end protect -->
+    <!-- cases -->
+      <div class="cases">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage text_align_center ">
+                     <h2>Coronavirus Cases</h2>
+                     <p>making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful</p>
+                  </div>
+               </div>
+            </div>
+            <div class="row d_flex">
+               <div class=" col-md-4">
+                  <div class="latest text_align_center">
+                     <figure><img src="../../../static/images3/cases1.png" alt="#"/></figure>
+                      <a class="read_more" href="#">Read More</a>
+                     <div class="nostrud">
+                        <h3>Mild Case:</h3>
+                        <p>
+                           A 30-year-old individual experiences mild symptoms, such as a sore throat, mild cough, and fatigue. They recover after a few days of rest, hydration, and over-the-counter medication.</p>
+                     </div>
+                  </div>
+               </div>
+               <div class=" col-md-4">
+                  <div class="latest text_align_center">
+                     <figure><img src="../../../static/images3/cases2.png" alt="#"/></figure>
+                      <a class="read_more" href="#">Read More</a>
+                     <div class="nostrud">
+                        <h3>Severe Case:</h3>
+                        <p>A 60-year-old individual with underlying health conditions, such as diabetes and hypertension, experiences difficulty breathing, high fever, and extreme fatigue. They are hospitalized and require oxygen therapy and medical monitoring</p>
+                     </div>
+                  </div>
+               </div>
+               <div class=" col-md-4">
+                  <div class="latest text_align_center">
+                     <figure><img src="../../../static/images3/cases3.png" alt="#"/></figure>
+                      <a class="read_more" href="#">Read More</a>
+                     <div class="nostrud">
+                        <h3>Asymptomatic Case:</h3>
+                        <p>A 25-year-old individual tests positive for COVID-19 but does not show any symptoms. They follow isolation protocols to prevent spreading the virus, even though they feel fine.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end cases -->
+         <!-- doctors -->
+      <div class="doctors">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage text_align_center ">
+                     <h2>What doctors say..</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="row d_flex">
+               <div class=" col-md-6">
+                     <div id="ho_efcet" class="reader text_align_center">
+                        <i><img src="../../../static/images3/doctor1.png" alt="#"/></i>
+                        <h3>Dr.Ramlah Ramadhan</h3>
+                        <p>With over 7 years of experience, Dr. Ramlah Ramadhan specializes in diagnosing and treating heart conditions. Known for their expertise in advanced cardiac care, they are committed to providing personalized treatment for every patient.</p>
+                        <span><img src="../../../static/images3/do.png" alt="#"/></span>
+                     </div>
+                  </div>
+                          <div class=" col-md-6">
+                     <div id="ho_efcet" class="reader text_align_center">
+                        <i><img src="../../../static/images3/doctor2.png" alt="#"/></i>
+                        <h3>Dr.Otaha Charles</h3>
+                        <p>Dr. Otaha Charles is a highly trained surgeon with a focus on [specific surgery type]. With a passion for precision and patient care, they ensure the best outcomes through meticulous procedures and compassionate support.</p>
+                        <span><img src="../../../static/images3/do.png" alt="#"/></span>
+                     </div>
+                  </div>
+               </div>
+         </div>
+      </div>
+      <!-- end cases -->
+<!-- update -->
+<!-- update -->
+      <!--  footer -->
+      <!-- end footer -->
+      <!-- Javascript files-->
+      <script src="../../../static/styles/js3/jquery.min.js"></script>
+      <script src="../../../static/styles/js3/bootstrap.bundle.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+      <script src="../../../static/styles/js3/owl.carousel.min.js"></script>
+      <script src="../../../static/styles/js3/custom.js"></script>
+   </body>
+</html>
+
+
+
+{% endblock %}

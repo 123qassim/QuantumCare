@@ -1,0 +1,169 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+Our Dentists - QuantumCare
+{% endblock %}
+
+{% block content %}
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PureSmiles Clinic - We Are Best Dental Clinic</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="../../../static/favicon.svg" type="image/svg+xml">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Roboto:wght@400;500;600&display=swap"
+    rel="stylesheet">
+</head>
+
+<body id="top">
+
+  <!--
+    - #HEADER
+  -->
+
+  <header class="header">
+
+
+    <div class="header-bottom" data-header>
+      <div class="container">
+
+        <a href="#" class="logo">PureSmiles Clinic</a>
+
+        <nav class="navbar container" data-navbar>
+          <ul class="navbar-list">
+
+            <li>
+              <a href="{% url 'dental_home' %}" class="navbar-link" data-nav-link>Home</a>
+            </li>
+
+            <li>
+              <a href="{% url 'dental_services' %}" class="navbar-link" data-nav-link>Services</a>
+            </li>
+
+            <li>
+              <a href="{% url 'dental_about' %}" class="navbar-link" data-nav-link>About Us</a>
+            </li>
+
+            <li>
+              <a href="{% url 'dental_blog' %}" class="navbar-link" data-nav-link>Blog</a>
+            </li>
+
+            <li>
+              <a href="{% url 'dental_doctors' %}" class="navbar-link" data-nav-link>Doctors</a>
+            </li>
+
+          </ul>
+        </nav>
+
+        <a href="{% url 'book_appointment' %}" class="btn btn-primary">Book Appointment</a>
+
+        <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>
+          <ion-icon name="menu-sharp" aria-hidden="true" class="menu-icon"></ion-icon>
+          <ion-icon name="close-sharp" aria-hidden="true" class="close-icon"></ion-icon>
+        </button>
+
+      </div>
+    </div>
+
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!--
+        - #HERO
+      -->
+
+      <section class="section hero" id="home" style="background-image: url('../../../static/images/hero-bg.png')"
+        aria-label="hero">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <p class="section-subtitle">Welcome To PureSmiles Clinic</p>
+
+            <h1 class="h1 hero-title">We Are Best Dental Clinic</h1>
+
+            <p class="hero-text">
+              Welcome to PureSmiles Clinic, where your oral health is our top priority. Our dedicated team of professionals is committed to providing exceptional dental care in a comfortable and welcoming environment.
+            </p>
+
+            <form action="" class="hero-form">
+              <input type="email" name="email_address" aria-label="email" placeholder="Your Email Address..." required
+                class="email-field">
+
+              <button type="submit" class="btn">Get Call Back</button>
+            </form>
+
+          </div>
+
+          <figure class="hero-banner">
+            <img src="../../../static/images/doc3.jpg" width="1280" height="853" alt="hero banner" class="w-100">
+          </figure>
+
+        </div>
+      </section>
+
+
+
+
+<!--
+    - #FOOTER
+  -->
+
+
+
+
+
+  <!--
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="caret-up" aria-hidden="true"></ion-icon>
+  </a>
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="../../../static/styles/script.js" defer></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
+
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+Book Appointment - QuantumCare
+{% endblock %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh; background-color: #f8f9fa;">
+    <div class="card shadow-lg" style="width: 100%; max-width: 800px; padding: 30px; border-radius: 10px; background: #ffffff;">
+        <h2 class="text-center mb-4" style="color: #0d6efd;">Book an Appointment</h2>
+        <form method="post" novalidate>
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="id_full_name" class="form-label">Full Name</label>
+                {{ form.full_name }}
+            </div>
+            <div class="mb-3">
+                <label for="id_contact_number" class="form-label">Contact Number</label>
+                {{ form.contact_number }}
+            </div>
+            <div class="mb-3">
+                <label for="id_email" class="form-label">Email</label>
+                {{ form.email }}
+            </div>
+            <div class="mb-3">
+                <label for="id_date_of_birth" class="form-label">Date of Birth</label>
+                {{ form.date_of_birth }}
+            </div>
+            <div class="mb-3">
+                <label for="id_address" class="form-label">Address</label>
+                {{ form.address }}
+            </div>
+            <div class="mb-3">
+                <label for="id_reason" class="form-label">Reason for Appointment</label>
+                {{ form.reason }}
+            </div>
+            <div class="mb-3">
+                <label for="id_department" class="form-label">Department</label>
+                {{ form.department }}
+            </div>
+            <div class="mb-3">
+                <label for="id_preferred_date" class="form-label">Preferred Date</label>
+                {{ form.preferred_date }}
+            </div>
+            <div class="mb-3">
+                <label for="id_preferred_time" class="form-label">Preferred Time</label>
+                {{ form.preferred_time }}
+            </div>
+            <div class="mb-3">
+                <label for="id_insurance_provider" class="form-label">Insurance Provider</label>
+                {{ form.insurance_provider }}
+            </div>
+            <div class="mb-3">
+                <label for="id_policy_number" class="form-label">Policy Number</label>
+                {{ form.policy_number }}
+            </div>
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary btn-lg">Submit Appointment</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

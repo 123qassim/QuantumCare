@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Importance of Oral Hygiene</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f8fb;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+        .featured-image {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #0077b6;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .like-comment {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .like-btn {
+            background: #0077b6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .like-btn:hover {
+            background: #005f91;
+        }
+        .comments-section {
+            margin-top: 30px;
+        }
+        .comments-section h2 {
+            color: #0077b6;
+        }
+        .comments-section textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .comments-section button {
+            background: #0077b6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .comments-section button:hover {
+            background: #005f91;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="../../../static/images/blog-1.jpg" alt="Oral Hygiene" class="featured-image">
+
+        <h1>The Importance of Oral Hygiene: Tips for a Healthy Smile</h1>
+
+        <p>
+            Maintaining proper oral hygiene is more than just keeping your teeth white—it plays a crucial role in your overall health.
+            At PureSmiles Clinic, we believe that everyone deserves a healthy, confident smile.
+        </p>
+        <p>
+            Oral hygiene prevents plaque build-up, strengthens enamel, and supports overall well-being. Regular brushing, flossing,
+            and professional cleanings are your best defense against oral issues.
+        </p>
+        <p>
+            Beyond physical health, oral hygiene can also improve your social and professional life. A clean smile and fresh breath make
+            every interaction more enjoyable. Remember to replace your toothbrush regularly and use fluoride toothpaste.
+        </p>
+        <p>
+            At PureSmiles Clinic, we encourage routine dental visits to ensure that your teeth and gums are healthy. Regular check-ups
+            can catch problems early, preventing the need for costly and invasive treatments later on.
+        </p>
+
+        <div class="like-comment">
+            <button class="like-btn" onclick="likePost()">👍 Like</button>
+            <p id="like-count">0 Likes</p>
+        </div>
+
+        <div class="comments-section">
+            <h2>Leave a Comment</h2>
+            <textarea id="comment-box" placeholder="Write your comment here..."></textarea>
+            <button onclick="submitComment()">Submit Comment</button>
+            <div id="comments-list" style="margin-top: 20px;"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        &copy; 2024 PureSmiles Clinic. All Rights Reserved.
+    </footer>
+
+    <script>
+        let likeCount = 0;
+
+        function likePost() {
+            likeCount++;
+            document.getElementById("like-count").innerText = `${likeCount} Likes`;
+        }
+
+        function submitComment() {
+            const commentBox = document.getElementById("comment-box");
+            const comment = commentBox.value.trim();
+            if (comment) {
+                const commentsList = document.getElementById("comments-list");
+                const newComment = document.createElement("p");
+                newComment.innerText = comment;
+                commentsList.appendChild(newComment);
+                commentBox.value = ""; // Clear the textarea
+            } else {
+                alert("Please write a comment before submitting.");
+            }
+        }
+    </script>
+</body>
+</html>

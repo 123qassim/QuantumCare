@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QuantumCare</title>
+</head>
+<body>
+<style>
+           /* Hero Section */
+        .hero-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background: #f2f4f8;
+            text-align: center;
+            padding: 2rem;
+        }
+        .hero-section h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero-section p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .button-container {
+            display: flex;
+            gap: 1rem;
+        }
+        .button-container a {
+            text-decoration: none;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            color: white;
+        }
+        .btn-login {
+            background-color: #430c0c;
+        }
+        .btn-signup {
+            background-color: #430c0c;
+            color: #430c0c;
+            border: 2px solid #0078D7;
+        }
+</style>
+    <div class="hero-section">
+        <h1>Welcome to QuantumCare Hospital</h1>
+        <p>Your health is our priority. Experience excellence in healthcare.</p>
+        <div class="button-container">
+             <a href="{% url 'login' %}" class="btn-login">Login</a>
+             <a href="{% url 'register' %}" class="btn-signup">Sign Up</a>
+        </div>
+
+    </div>
+</body>
+</html>

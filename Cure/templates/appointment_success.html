@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+Appointment Confirmed - QuantumCare
+{% endblock %}
+
+{% block content %}
+<div class="container text-center my-5">
+    <h2 class="text-success">Appointment Booked Successfully!</h2>
+    <p class="mt-4">
+        Thank you for booking an appointment with QuantumCare. We have sent a confirmation email to you.
+    </p>
+    <a href="{% url 'quantumcare' %}" class="btn btn-primary mt-3">Go Back to Home</a>
+</div>
+{% endblock %}
+
